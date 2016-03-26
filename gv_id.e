@@ -62,10 +62,8 @@ feature {TEST_SET_BRIDGE} -- Implementation
 
 	alphabetic: STRING_32
 		once
-			Result := ranged_string (<<(Lower_a |..| Lower_z)>>)
-			Result.append_string (ranged_string (<<(Upper_a |..| Upper_z)>>))
+			Result := ranged_string (<<(Lower_a |..| Lower_z), (Upper_a |..| Upper_z), (Zero |..| Nine)>>)
 			Result.append_character ('_')
-			Result.append_string (ranged_string (<<(Zero |..| Nine)>>))
 			--Result.append_string (ranged_string (<<(200 |..| 377)>>))
 		end
 
