@@ -11,29 +11,42 @@ inherit
 
 	ASCII
 
+create
+	make_with_name
+
+feature {NONE} -- Initialization
+
+	make_with_name (a_name: like name)
+			-- `make_with_name' `a_name'.
+		do
+			name := a_name
+		ensure
+			set: name.same_string (a_name)
+		end
+
 feature -- Access
 
-	text: STRING assign set_text
-			-- `text' of Current {GV_ID}.
+	name: STRING assign set_text
+			-- `name' of Current {GV_ID}.
 		attribute
 			create Result.make_empty
 		end
 
 feature -- Settings
 
-	set_text (a_text: like text)
+	set_text (a_text: like name)
 			-- `set_text' with `a_text'
 		require
 			valid: is_valid (a_text)
 		do
-			text := a_text
+			name := a_text
 		ensure
-			set: text.same_string (a_text)
+			set: name.same_string (a_text)
 		end
 
 feature -- Status Report
 
-	is_valid (a_text: like text): BOOLEAN
+	is_valid (a_text: like name): BOOLEAN
 			-- `is_valid' `a_text'?
 		note
 			specification: "[

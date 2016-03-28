@@ -13,6 +13,9 @@ class
 
 inherit
 	GV_ANY
+		undefine
+			out
+		end
 
 	GV_ATTRIBUTE_HELPER
 		redefine

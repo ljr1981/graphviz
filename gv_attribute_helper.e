@@ -6,6 +6,43 @@ note
 deferred class
 	GV_ATTRIBUTE_HELPER
 
+inherit
+	ANY
+		redefine
+			out
+		end
+
+feature -- Output
+
+	out: STRING
+			-- <Precursor>
+		local
+			l_add_quotes: BOOLEAN
+		do
+			create Result.make_empty
+			across
+				attribute_list as ic_list
+			loop
+				if
+					attached ic_list.item.attr_value as al_value and then
+					attached ic_list.item.attr_default as al_default and then
+					not al_value.out.same_string (al_default.out)
+				then
+					l_add_quotes := attached {STRING} al_value
+					Result.append_string_general (ic_list.item.attr_name)
+					Result.append_character ('=')
+					if l_add_quotes then Result.append_character ('"') end
+					Result.append_string_general (al_value.out)
+					if l_add_quotes then Result.append_character ('"') end
+					Result.append_character (';')
+					Result.append_character (' ')
+				end
+			end
+			if Result.count > 0 and then Result [Result.count] = ' ' then
+				Result.remove_tail (1)
+			end
+		end
+
 feature -- Attributes
 
 	color: 				attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "color"] end
@@ -40,7 +77,7 @@ feature -- Attributes
 			Result.force (xlabel, "xlabel")
 			Result.force (xlp, "xlp")
 		ensure
-			count: Result.count = 13
+			count: Result.count >= 13
 			matching: across Result as ic all ic.key.same_string (ic.item.attr_name) end
 		end
 

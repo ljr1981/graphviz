@@ -14,24 +14,53 @@ class
 
 inherit
 	GV_ANY
+		undefine
+			out
+		end
 
 	GV_ATTRIBUTE_HELPER
 		redefine
-			attribute_list
+			attribute_list,
+			out
+		end
+
+create
+	make_with_id
+
+feature {NONE} -- Initialization
+
+	make_with_id (a_id: GV_ID)
+			-- `make_with_id' `a_id'.
+		do
+			id := a_id
+		end
+
+feature -- Output
+
+	node_statement: STRING
+			-- `node_statement'.
+		note
+			specification: "[
+				node_stmt	:	node_id [ attr_list ]
+				]"
+		do
+			Result := out
 		end
 
 feature -- Attributes
+
+	id: GV_ID
 
 	area: 			attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "area"] end
 	distortion: 	attached like attribute_tuple_anchor attribute Result := [0.00, 0.00, -100.00, "distortion"] end
 	fixedsize:		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "fixedsize"] end
 	gradientangle: 	attached like attribute_tuple_anchor attribute Result := ["", "", Void, "gradientangle"] end
 	group: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "group"] end
-	height: 		attached like attribute_tuple_anchor attribute Result := [0.5, 0.2, Void, "height"] end
+	height: 		attached like attribute_tuple_anchor attribute Result := [0.5, 0.5, 0.2, "height"] end
 	image: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "image"] end
 	imagescale: 	attached like attribute_tuple_anchor attribute Result := [False, False, Void, "imagescale"] end
 	margin: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "margin"] end
-	orientation: 	attached like attribute_tuple_anchor attribute Result := [0, 360, Void, "orientation"] end
+	orientation: 	attached like attribute_tuple_anchor attribute Result := [0, 0, 360, "orientation"] end
 	penwidth: 		attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "penwidth"] end
 	peripheries: 	attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "peripheries"] end
 	pin: 			attached like attribute_tuple_anchor attribute Result := [False, False, Void, "pin"] end
@@ -76,6 +105,17 @@ feature -- Attributes
 		ensure then
 			count: Result.count = (13 + 23)
 			matching: across Result as ic all ic.key.same_string (ic.item.attr_name) end
+		end
+
+feature {NONE} -- Implementation: Output
+
+	out: STRING
+			-- <Precursor>
+		do
+			create Result.make_empty
+			Result.append_string_general (id.name)
+			Result.append_character (' ')
+			Result.append_string_general (Precursor {GV_ATTRIBUTE_HELPER})
 		end
 
 ;note
