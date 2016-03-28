@@ -37,10 +37,10 @@ feature -- Test routines
 			create l_id
 			assert_32 ("valid_alpha", l_id.is_valid (l_id.alphabetic))
 			assert_32 ("invalid_starts_with_0", not l_id.is_valid ("0" + l_id.alphabetic))
-			assert_32 ("valid_integer", across (1 |..| 10_000) as ic all l_id.is_valid (ic.item.out) end)
+			assert_32 ("valid_integer", across 1 |..| 10_000 as ic all l_id.is_valid (ic.item.out) end)
 			create l_randomizer
-			assert_32 ("valid_real", across (1 |..| 10_000) as ic all l_id.is_valid (l_randomizer.random_real.out) end)
-			assert_32 ("valid_rnd_alpha", across (1 |..| 10_000) as ic all l_id.is_valid (l_randomizer.random_identifier) end)
+			assert_32 ("valid_real", across 1 |..| 10_000 as ic all l_id.is_valid (l_randomizer.random_real.out) end)
+			assert_32 ("valid_rnd_alpha", across 1 |..| 10_000 as ic all l_id.is_valid (l_randomizer.random_identifier) end)
 		end
 
 end
