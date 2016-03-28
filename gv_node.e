@@ -50,6 +50,7 @@ feature -- Output
 feature -- Attributes
 
 	id: GV_ID
+			-- `id' of Current {GV_NODE}.
 
 	area: 			attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "area"] end
 	distortion: 	attached like attribute_tuple_anchor attribute Result := [0.00, 0.00, -100.00, "distortion"] end
@@ -115,7 +116,7 @@ feature {NONE} -- Implementation: Output
 			create Result.make_empty
 			Result.append_string_general (id.name)
 			Result.append_character (' ')
-			Result.append_string_general (Precursor {GV_ATTRIBUTE_HELPER})
+			Result.append_string_general (attributes_out)
 		end
 
 ;note

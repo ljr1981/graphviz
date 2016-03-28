@@ -16,6 +16,11 @@ feature -- Output
 
 	out: STRING
 			-- <Precursor>
+		do
+			Result := attributes_out
+		end
+
+	attributes_out: STRING
 		local
 			l_add_quotes: BOOLEAN
 		do
