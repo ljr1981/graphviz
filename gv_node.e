@@ -13,15 +13,14 @@ class
 	GV_NODE
 
 inherit
-	GV_ANY
+	GV_STATEMENT
 		undefine
 			out
 		end
 
 	GV_ATTRIBUTE_HELPER
 		redefine
-			attribute_list,
-			out
+			attribute_list
 		end
 
 create
@@ -37,14 +36,25 @@ feature {NONE} -- Initialization
 
 feature -- Output
 
-	node_statement: STRING
-			-- `node_statement'.
+	statement_out: STRING
+			-- <Precursor>
 		note
 			specification: "[
 				node_stmt	:	node_id [ attr_list ]
 				]"
+		local
+			l_attributes_text: STRING
 		do
-			Result := out
+			create Result.make_empty
+			l_attributes_text := attributes_out
+			if not l_attributes_text.is_empty then
+				Result.append_string_general ("node")
+				Result.append_character (' ')
+				Result.append_character ('[')
+				Result.append_string_general (l_attributes_text)
+				Result.append_character (']')
+				Result.append_character (';')
+			end
 		end
 
 feature -- Attributes
@@ -106,17 +116,6 @@ feature -- Attributes
 		ensure then
 			count: Result.count = (13 + 23)
 			matching: across Result as ic all ic.key.same_string (ic.item.attr_name) end
-		end
-
-feature {NONE} -- Implementation: Output
-
-	out: STRING
-			-- <Precursor>
-		do
-			create Result.make_empty
-			Result.append_string_general (id.name)
-			Result.append_character (' ')
-			Result.append_string_general (attributes_out)
 		end
 
 ;note

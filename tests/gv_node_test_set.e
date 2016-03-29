@@ -52,13 +52,14 @@ feature -- Test routines
 			l_node: GV_NODE
 		do
 			create l_node.make_with_id (create {GV_ID}.make_with_name ("test_1"))
+			assert_strings_equal ("nothing", "", l_node.statement_out)
 			l_node.set_attribute_value (3, agent l_node.penwidth)
 			assert_32 ("penwidth", attached {INTEGER_32_REF} l_node.penwidth.attr_value as al_value and then al_value = 3)
-			assert_strings_equal ("node_statement_penwidth", "test_1 penwidth=3;", l_node.node_statement)
+			assert_strings_equal ("node_statement_1", "node [penwidth=3];", l_node.statement_out)
 			l_node.set_attribute_value ("some comment", agent l_node.comment)
-			assert_strings_equal ("node_statement_penwidth", "test_1 comment=%"some comment%"; penwidth=3;", l_node.node_statement)
+			assert_strings_equal ("node_statement_2", "node [comment=%"some comment%"; penwidth=3];", l_node.statement_out)
 			l_node.set_attribute_value (True, agent l_node.imagescale)
-			assert_strings_equal ("node_statement_penwidth", "test_1 comment=%"some comment%"; imagescale=True; penwidth=3;", l_node.node_statement)
+			assert_strings_equal ("node_statement_3", "node [comment=%"some comment%"; imagescale=True; penwidth=3];", l_node.statement_out)
 		end
 
 end

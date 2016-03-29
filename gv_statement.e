@@ -1,24 +1,29 @@
 note
-	description: "Summary description for {GV_STATEMENT}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description: "[
+		Abstract notion of a {GV_STATEMENT}.
+		]"
+	design: "[
+		stmt	:	node_stmt
+					|	edge_stmt
+					|	attr_stmt
+					|	ID '=' ID
+					|	subgraph
+		]"
 
-class
+deferred class
 	GV_STATEMENT
 
 inherit
 	GV_ANY
-		redefine
-			out
-		end
 
-feature -- Output
+feature -- Access
 
-	out: STRING
-			-- <Precursor>
-		do
-			create Result.make_empty
+	keyword: detachable STRING
+			-- `keyword' (if any).
+
+	statement_out: STRING
+			-- `statement_out'
+		deferred
 		end
 
 end

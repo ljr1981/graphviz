@@ -44,7 +44,7 @@ feature -- Output
 				end
 			end
 			if Result.count > 0 and then Result [Result.count] = ' ' then
-				Result.remove_tail (1)
+				Result.remove_tail (2)
 			end
 		end
 
