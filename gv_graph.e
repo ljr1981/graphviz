@@ -23,8 +23,7 @@ inherit
 
 	GV_ATTRIBUTE_HELPER
 		redefine
-			attribute_list,
-			out
+			attribute_list
 		end
 
 create
@@ -47,7 +46,30 @@ feature -- Output
 				graph	:	[ strict ] (graph | digraph) [ ID ]
 				]"
 		do
-			Result := out
+			create Result.make_empty
+			if is_digraph then Result.append_string_general ("digraph ") end
+			Result.append_string_general (id.name)
+			Result.append_character (' ')
+			Result.append_character ('{')
+			Result.append_string_general (attributes_out)
+			across statement_list as ic loop
+				if
+					attached {GV_NODE} ic.item as al_node and then
+					attached ic.item.statement_out as al_statement and then
+					not al_statement.is_empty
+				then
+					Result.append_character (' ')
+					Result.append_string_general (al_statement)
+					Result.append_character (' ')
+					Result.append_string_general (al_node.id.name)
+					Result.append_character (';')
+				elseif attached {GV_EDGE} ic.item as al_edge then
+					Result.append_character (' ')
+					Result.append_string (al_edge.statement_out)
+				end
+			end
+			Result.append_character ('}')
+			print (Result)
 		end
 
 feature -- Status Report
@@ -179,7 +201,7 @@ feature -- Attributes
 --pagedir
 --quadtree
 --quantum
-	rankdir: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rankdir"] end
+	rankdir: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rankdir", False] end
 --ranksep
 --ratio
 --remincross
@@ -191,7 +213,7 @@ feature -- Attributes
 --searchsize
 --sep
 --size
-	size: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "size"] end
+	size: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "size", True] end
 --smoothing
 --splines
 --start
@@ -234,21 +256,6 @@ feature -- Settings
 			is_digraph := not is_digraph
 		ensure
 			toggled: is_digraph = not old is_digraph
-		end
-
-feature {NONE} -- Implementation: Output
-
-	out: STRING
-			-- <Precursor>
-		do
-			create Result.make_empty
-			if is_digraph then Result.append_string_general ("digraph ") end
-			Result.append_string_general (id.name)
-			Result.append_character (' ')
-			Result.append_character ('{')
-			Result.append_string_general (attributes_out)
-			across statement_list as ic loop Result.append_string_general (ic.item.out) end
-			Result.append_character ('}')
 		end
 
 end
