@@ -1,0 +1,1 @@
+digraph finite_state_machine {rankdir=LR;size="8,5" node [shape = circle];S1 -> S1 [ label = "S1 -> S1" ];S1 -> S2 [ label = "S1 -> S2" ];S2 -> S1 [ label = "S2 -> S1" ];S2 -> S2 [ label = "S2 -> S2" ];}

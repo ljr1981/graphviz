@@ -50,19 +50,19 @@ feature -- Output
 
 feature -- Attributes
 
-	color: 				attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "color", False] end
-	colorscheme: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "colorscheme", False] end
-	comment: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "comment", True] end
-	fillcolor: 			attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "fillcolor", False] end
-	fontcolor: 			attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "fontcolor", False] end
-	fontname: 			attached like attribute_tuple_anchor attribute Result := ["Times-Roman", "Times-Roman", Void, "fontname", False] end
-	fontsize: 			attached like attribute_tuple_anchor attribute Result := [14, 14, 1, "fontsize", False] end
-	labelloc: 			attached like attribute_tuple_anchor attribute Result := ["c", "c", Void, "labelloc", False] end
-	showboxes: 			attached like attribute_tuple_anchor attribute Result := [0, 0, 0, "showboxes", False] end
-	target:				attached like attribute_tuple_anchor attribute Result := ["<none>", "<none>", Void, "target", False] end
-	tooltip: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "tooltip", False] end
-	xlabel:				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "xlabel", False] end
-	xlp: 				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "xlp", False] end
+	color: 				attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "color", is_unquoted] end
+	colorscheme: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "colorscheme", is_unquoted] end
+	comment: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "comment", is_quoted] end
+	fillcolor: 			attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "fillcolor", is_unquoted] end
+	fontcolor: 			attached like attribute_tuple_anchor attribute Result := ["black", "black", Void, "fontcolor", is_unquoted] end
+	fontname: 			attached like attribute_tuple_anchor attribute Result := ["Times-Roman", "Times-Roman", Void, "fontname", is_unquoted] end
+	fontsize: 			attached like attribute_tuple_anchor attribute Result := [14, 14, 1, "fontsize", is_unquoted] end
+	labelloc: 			attached like attribute_tuple_anchor attribute Result := ["c", "c", Void, "labelloc", is_unquoted] end
+	showboxes: 			attached like attribute_tuple_anchor attribute Result := [0, 0, 0, "showboxes", is_unquoted] end
+	target:				attached like attribute_tuple_anchor attribute Result := ["<none>", "<none>", Void, "target", is_unquoted] end
+	tooltip: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "tooltip", is_unquoted] end
+	xlabel:				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "xlabel", is_unquoted] end
+	xlp: 				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "xlp", is_unquoted] end
 
 	attribute_list: HASH_TABLE [attached like attribute_tuple_anchor, STRING]
 			-- `attribute_list'.
@@ -108,5 +108,11 @@ feature -- Settings
 feature {NONE} -- Implementation: Anchors
 
 	attribute_tuple_anchor: detachable TUPLE [attr_value: detachable ANY; attr_default: detachable ANY; attr_minimum: detachable NUMERIC; attr_name: STRING; is_quoted: BOOLEAN]
+
+feature {NONE} -- Implementation: Constants
+
+	is_quoted: BOOLEAN = True
+
+	is_unquoted: BOOLEAN = False
 
 end

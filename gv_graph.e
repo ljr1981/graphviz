@@ -69,7 +69,6 @@ feature -- Output
 				end
 			end
 			Result.append_character ('}')
-			print (Result)
 		end
 
 feature -- Status Report
@@ -201,7 +200,7 @@ feature -- Attributes
 --pagedir
 --quadtree
 --quantum
-	rankdir: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rankdir", False] end
+	rankdir: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rankdir", is_unquoted] end
 --ranksep
 --ratio
 --remincross
@@ -213,7 +212,7 @@ feature -- Attributes
 --searchsize
 --sep
 --size
-	size: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "size", True] end
+	size: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "size", is_quoted] end
 --smoothing
 --splines
 --start

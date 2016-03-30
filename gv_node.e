@@ -62,29 +62,29 @@ feature -- Attributes
 	id: GV_ID
 			-- `id' of Current {GV_NODE}.
 
-	area: 			attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "area", False] end
-	distortion: 	attached like attribute_tuple_anchor attribute Result := [0.00, 0.00, -100.00, "distortion", False] end
-	fixedsize:		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "fixedsize", False] end
-	gradientangle: 	attached like attribute_tuple_anchor attribute Result := ["", "", Void, "gradientangle", False] end
-	group: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "group", False] end
-	height: 		attached like attribute_tuple_anchor attribute Result := [0.5, 0.5, 0.2, "height", False] end
-	image: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "image", False] end
-	imagescale: 	attached like attribute_tuple_anchor attribute Result := [False, False, Void, "imagescale", False] end
-	margin: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "margin", False] end
-	orientation: 	attached like attribute_tuple_anchor attribute Result := [0, 0, 360, "orientation", False] end
-	penwidth: 		attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "penwidth", False] end
-	peripheries: 	attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "peripheries", False] end
-	pin: 			attached like attribute_tuple_anchor attribute Result := [False, False, Void, "pin", False] end
-	rects: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rects", False] end
-	regular: 		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "regular", False] end
-	samplepoints: 	attached like attribute_tuple_anchor attribute Result := [8, 8, Void, "samplepoints", False] end
-	shape: 			attached like attribute_tuple_anchor attribute Result := ["ellipse", "ellipse", Void, "shape", False] end
-	shapefile: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "shapefile", False] end
-	sides: 			attached like attribute_tuple_anchor attribute Result := [4, 4, 0, "sides", False] end
-	skew: 			attached like attribute_tuple_anchor attribute Result := [0, 0, -100, "skew", False] end
-	vertices: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "vertices", False] end
-	width: 			attached like attribute_tuple_anchor attribute Result := [0.75, 0.75, 0.01, "width", False] end
-	z: 				attached like attribute_tuple_anchor attribute Result := [0, 0, -1000, "z", False] end
+	area: 			attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "area", is_unquoted] end
+	distortion: 	attached like attribute_tuple_anchor attribute Result := [0.00, 0.00, -100.00, "distortion", is_unquoted] end
+	fixedsize:		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "fixedsize", is_unquoted] end
+	gradientangle: 	attached like attribute_tuple_anchor attribute Result := ["", "", Void, "gradientangle", is_unquoted] end
+	group: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "group", is_unquoted] end
+	height: 		attached like attribute_tuple_anchor attribute Result := [0.5, 0.5, 0.2, "height", is_unquoted] end
+	image: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "image", is_unquoted] end
+	imagescale: 	attached like attribute_tuple_anchor attribute Result := [False, False, Void, "imagescale", is_unquoted] end
+	margin: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "margin", is_unquoted] end
+	orientation: 	attached like attribute_tuple_anchor attribute Result := [0, 0, 360, "orientation", is_unquoted] end
+	penwidth: 		attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "penwidth", is_unquoted] end
+	peripheries: 	attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "peripheries", is_unquoted] end
+	pin: 			attached like attribute_tuple_anchor attribute Result := [False, False, Void, "pin", is_unquoted] end
+	rects: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rects", is_unquoted] end
+	regular: 		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "regular", is_unquoted] end
+	samplepoints: 	attached like attribute_tuple_anchor attribute Result := [8, 8, Void, "samplepoints", is_unquoted] end
+	shape: 			attached like attribute_tuple_anchor attribute Result := ["ellipse", "ellipse", Void, "shape", is_unquoted] end
+	shapefile: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "shapefile", is_unquoted] end
+	sides: 			attached like attribute_tuple_anchor attribute Result := [4, 4, 0, "sides", is_unquoted] end
+	skew: 			attached like attribute_tuple_anchor attribute Result := [0, 0, -100, "skew", is_unquoted] end
+	vertices: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "vertices", is_unquoted] end
+	width: 			attached like attribute_tuple_anchor attribute Result := [0.75, 0.75, 0.01, "width", is_unquoted] end
+	z: 				attached like attribute_tuple_anchor attribute Result := [0, 0, -1000, "z", is_unquoted] end
 
 	attribute_list: HASH_TABLE [attached like attribute_tuple_anchor, STRING]
 			-- <Precursor>

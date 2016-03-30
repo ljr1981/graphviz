@@ -1,0 +1,114 @@
+background:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "_background"] end				 string				   <none>
+bb:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "bb"] end					 rect
+bgcolor:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "bgcolor"] end				 "color colorList"		   <none>
+center:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "center"] end				 bool				   FALSE
+charset:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "charset"] end				 string				   "UTF-8"
+clusterrank:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "clusterrank"] end				 clusterMode			   local
+colorscheme:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "colorscheme"] end				 string				   ""
+comment:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "comment"] end				 string				   ""
+compound:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "compound"] end				 bool				   FALSE
+concentrate:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "concentrate"] end				 bool				   FALSE
+Damping:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "Damping"] end				 double				   0.99
+defaultdist:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "defaultdist"] end				 double				   1+(avg. len)*sqrt(|V|)
+dim:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "dim"] end					 int				   2
+dimen:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "dimen"] end				 int				   2
+diredgeconstraints:	attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "diredgeconstraints"] end			 "string bool"			   FALSE
+dpi:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "dpi"] end					 double				   "96.0
+epsilon:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "epsilon"] end				 double				   0.0"
+esep:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "esep"] end					 "addDouble addPoint"		   ".0001 * # nodes(mode == KK)	.0001(mode == major)"3
+fontcolor:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "fontcolor"] end				 color				   black
+fontname:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "fontname"] end				 string				   "Times-Roman"
+fontnames:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "fontnames"] end				 string				   ""
+fontpath:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "fontpath"] end				 string				   system-dependent
+fontsize:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "fontsize"] end				 double				   14
+forcelabels:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "forcelabels"] end				 bool				   TRUE
+gradientangle:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "gradientangle"] end			 int				   ""
+href:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "href"] end					 escString			   ""
+id:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "id"] end					 escString			   ""
+imagepath:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "imagepath"] end				 string				   ""
+inputscale:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "inputscale"] end				 double				   <none>
+K:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "K"] end					 double				   0.3
+label:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "label"] end				 lblString			   """\N"" (nodes)
+label_scheme:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "label_scheme"] end				 int				   """" (otherwise)"
+labeljust:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "labeljust"] end				 string				   0
+labelloc:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "labelloc"] end				 string				   "c"
+landscape:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "landscape"] end				 bool				   """t""(clusters)
+layerlistsep:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "layerlistsep"] end				 string				   ""b""(root graphs)
+layers:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "layers"] end				 layerList			   ""c""(nodes)"
+layerselect:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "layerselect"] end				 layerRange			   FALSE
+layersep:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "layersep"] end				 string				   ","
+layout:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "layout"] end				 string				   ""
+levels:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "levels"] end				 int				   ""
+levelsgap:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "levelsgap"] end				 double				   " :\t"
+lheight:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "lheight"] end				 double				   ""
+lp:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "lp"] end					 point				   MAXINT
+lwidth:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "lwidth"] end				 double				   0
+margin:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "margin"] end				 "double point"			   
+maxiter:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "maxiter"] end				 int				   
+mclimit:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "mclimit"] end				 double
+mindist:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "mindist"] end				 double				   <device-dependent>
+mode:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "mode"] end					 string				   "100 * # nodes(mode == KK)
+model:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "model"] end				 string				   200(mode == major)
+mosek:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "mosek"] end				 bool				   600(fdp)"
+nodesep:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "nodesep"] end				 double				   1
+nojustify:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "nojustify"] end				 bool				   1
+normalize:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "normalize"] end				 "double bool"			   major
+notranslate:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "notranslate"] end				 bool				   shortpath
+nslimit1:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "nslimit1"] end				 double				   FALSE
+nslimit:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "nslimit "] end 				 string				   0.25
+ordering:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "ordering"] end				 string				   FALSE
+orientation:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "orientation"] end				 outputMode			   FALSE
+outputorder:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "outputorder"] end				 "string bool"			   FALSE
+overlap:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "overlap"] end				 double				   
+overlap_scaling:	attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "overlap_scaling"] end			 bool				   ""
+overlap_shrink:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "overlap_shrink"] end			 "bool int"			   ""
+pack:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "pack"] end					 packMode			   breadthfirst
+packmode:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "packmode"] end				 "double point"			   TRUE
+pad:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "pad"] end					 "double point"			   -4
+page:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "page"] end					 pagedir			   TRUE
+pagedir:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "pagedir"] end				 "quadType bool"		   FALSE
+quadtree:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "quadtree"] end				 double				   node
+quantum:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "quantum"] end				 rankdir			   0.0555 (4 points)
+rankdir:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "rankdir"] end				 "double doubleList"		   
+ranksep:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "ranksep"] end				 "double string"		   BL
+ratio:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "ratio"] end				 bool				   normal
+remincross:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "remincross"] end				 double				   0
+repulsiveforce:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "repulsiveforce"] end			 double				   TB
+resolution:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "resolution"] end				 "string bool"			   "0.5(dot)
+root:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "root"] end					 int				   1.0(twopi)"
+rotate:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "rotate"] end				 double				   
+rotation:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "rotation"] end				 "double point"			   TRUE
+scale:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "scale"] end				 int				   1
+searchsize:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "searchsize"] end				 "addDouble addPoint"		   "96.0
+sep:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "sep"] end					 int				   0.0"
+showboxes:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "showboxes"] end				 "double point"			   "<none>(graphs)
+size:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "size"] end					 smoothType			   false(nodes)"
+smoothing:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "smoothing"] end				 int				   0
+sortv:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "sortv"] end				 "bool 	string"			   0
+splines:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "splines"] end				 startType			   
+start:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "start"] end				 style				   30
+style:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "style"] end				 string				   4
+stylesheet:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "stylesheet"] end				 "escString string"		   0
+target:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "target"] end				 bool				   
+truecolor:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "truecolor"] end				 escString			   "none"
+URL:			attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "URL"] end					 viewPort			   0
+viewport:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "viewport"] end				 double				   
+voro_margin:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "voro_margin"] end				 string				   ""
+xdotversion:		attached like attribute_tuple_anchor attribute Result := [Void, Void, Void, "xdotversion"] end				 				   ""
+																		 				   ""
+																		 				   <none>
+																		 				   
+																		 				   <none>
+																		 				   ""
+																		 				   0.05
+																		 				   
+																		 				   
+																		 
+																		 
+																		 
+																		 
+																		 
+																		 
+																		 
+																		 
+																		 
