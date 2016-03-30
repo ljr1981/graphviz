@@ -88,7 +88,7 @@ feature -- Attributes
 
 feature -- Settings
 
-	set_attribute_value (a_value: detachable ANY; a_getter: FUNCTION [attached like attribute_tuple_anchor])
+	set_attribute_value (a_getter: FUNCTION [attached like attribute_tuple_anchor]; a_value: detachable ANY)
 			-- `set_attribute_value' to `a_value' using `a_getter' agent function.
 		do
 			a_getter.call ([Void])
