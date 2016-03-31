@@ -68,7 +68,7 @@ feature -- Attributes
 	gradientangle: 	attached like attribute_tuple_anchor attribute Result := ["", "", Void, "gradientangle", is_unquoted] end
 	group: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "group", is_unquoted] end
 	height: 		attached like attribute_tuple_anchor attribute Result := [0.5, 0.5, 0.2, "height", is_unquoted] end
-	image: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "image", is_unquoted] end
+	image: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "image", is_quoted] end
 	imagescale: 	attached like attribute_tuple_anchor attribute Result := [False, False, Void, "imagescale", is_unquoted] end
 	margin: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "margin", is_unquoted] end
 	orientation: 	attached like attribute_tuple_anchor attribute Result := [0, 0, 360, "orientation", is_unquoted] end
