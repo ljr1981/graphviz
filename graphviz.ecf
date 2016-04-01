@@ -13,7 +13,7 @@
 		<library name="pub_sub" location="$GITHUB\pub_sub\pub_sub.ecf"/>
 		<library name="randomizer" location="$GITHUB\randomizer\randomizer.ecf"/>
 		<library name="state_machine" location="$GITHUB\state_machine\state_machine.ecf"/>
-		<library name="test_set_bridge" location="$GITHUB\test_extension\test_set_bridge.ecf"/>
+		<library name="test_extension" location="$GITHUB\test_extension\test_extension.ecf"/>
 		<library name="thread" location="$ISE_LIBRARY\library\thread\thread-safe.ecf"/>
 		<library name="validation" location="$GITHUB\validation\validation.ecf"/>
 		<cluster name="graphviz" location=".\" recursive="true">
