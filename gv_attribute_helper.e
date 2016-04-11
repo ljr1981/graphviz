@@ -32,19 +32,19 @@ feature -- Attributes
 			-- `attribute_list'.
 		do
 			create Result.make (13)
-			Result.force (color, "color")
-			Result.force (colorscheme, "colorscheme")
-			Result.force (comment, "comment")
-			Result.force (fillcolor, "fillcolor")
-			Result.force (fontcolor, "fontcolor")
-			Result.force (fontname, "fontname")
-			Result.force (fontsize, "fontsize")
-			Result.force (labelloc, "labelloc")
-			Result.force (showboxes, "showboxes")
-			Result.force (target, "target")
-			Result.force (tooltip, "tooltip")
-			Result.force (xlabel, "xlabel")
-			Result.force (xlp, "xlp")
+			Result.force (color, color.attr_name)
+			Result.force (colorscheme, colorscheme.attr_name)
+			Result.force (comment, comment.attr_name)
+			Result.force (fillcolor, fillcolor.attr_name)
+			Result.force (fontcolor, fontcolor.attr_name)
+			Result.force (fontname, fontname.attr_name)
+			Result.force (fontsize, fontsize.attr_name)
+			Result.force (labelloc, labelloc.attr_name)
+			Result.force (showboxes, showboxes.attr_name)
+			Result.force (target, target.attr_name)
+			Result.force (tooltip, tooltip.attr_name)
+			Result.force (xlabel, xlabel.attr_name)
+			Result.force (xlp, xlp.attr_name)
 		ensure then
 			count: Result.count >= 13
 			matching: across Result as ic all ic.key.same_string (ic.item.attr_name) end

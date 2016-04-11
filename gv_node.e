@@ -78,7 +78,7 @@ feature -- Attributes
 	rects: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rects", is_unquoted] end
 	regular: 		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "regular", is_unquoted] end
 	samplepoints: 	attached like attribute_tuple_anchor attribute Result := [8, 8, Void, "samplepoints", is_unquoted] end
-	shape: 			attached like attribute_tuple_anchor attribute Result := ["ellipse", "ellipse", Void, "shape", is_unquoted] end
+	shape: 			attached like attribute_tuple_anchor attribute Result := ["ellipse", "ellipse|doublecircle|circle", Void, "shape", is_unquoted] end
 	shapefile: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "shapefile", is_unquoted] end
 	sides: 			attached like attribute_tuple_anchor attribute Result := [4, 4, 0, "sides", is_unquoted] end
 	skew: 			attached like attribute_tuple_anchor attribute Result := [0, 0, -100, "skew", is_unquoted] end

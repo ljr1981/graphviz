@@ -107,7 +107,7 @@ feature -- Attributes
 	headURL: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "headURL", is_unquoted] end
 	href: 				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "href", is_unquoted] end
 	id: 				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "id", is_unquoted] end
-	label: 				attached like attribute_tuple_anchor attribute Result := ["%N", "%N", Void, "label", is_quoted] end
+	label: 				attached like attribute_tuple_anchor attribute Result := ["", "", Void, "label", is_quoted] end
 	labelangle:			attached like attribute_tuple_anchor attribute Result := [-25, -25, -180, "labelangle", is_unquoted] end
 	labeldistance: 		attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "labeldistance", is_unquoted] end
 	labelfloat:			attached like attribute_tuple_anchor attribute Result := [False, False, Void, "labelfloat", is_unquoted] end
