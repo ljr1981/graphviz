@@ -10,12 +10,9 @@
 		<setting name="concurrency" value="thread"/>
 		<library name="base" location="$ISE_LIBRARY\library\base\base-safe.ecf"/>
 		<library name="framework" location="..\Framework\framework.ecf"/>
-		<library name="pub_sub" location="..\pub_sub\pub_sub.ecf"/>
 		<library name="randomizer" location="..\randomizer\randomizer.ecf"/>
-		<library name="state_machine" location="..\state_machine\state_machine.ecf"/>
 		<library name="test_extension" location="..\test_extension\test_extension.ecf"/>
 		<library name="thread" location="$ISE_LIBRARY\library\thread\thread-safe.ecf"/>
-		<library name="validation" location="..\validation\validation.ecf"/>
 		<cluster name="graphviz" location=".\" recursive="true">
 			<file_rule>
 				<exclude>/.git$</exclude>
