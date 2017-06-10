@@ -70,6 +70,7 @@ feature -- Attributes
 	height: 		attached like attribute_tuple_anchor attribute Result := [0.5, 0.5, 0.2, "height", is_unquoted] end
 	image: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "image", is_quoted] end
 	imagescale: 	attached like attribute_tuple_anchor attribute Result := [False, False, Void, "imagescale", is_unquoted] end
+	label:			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "label", is_unquoted] end
 	margin: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "margin", is_unquoted] end
 	orientation: 	attached like attribute_tuple_anchor attribute Result := [0, 0, 360, "orientation", is_unquoted] end
 	penwidth: 		attached like attribute_tuple_anchor attribute Result := [1, 1, 0, "penwidth", is_unquoted] end
@@ -78,7 +79,7 @@ feature -- Attributes
 	rects: 			attached like attribute_tuple_anchor attribute Result := ["", "", Void, "rects", is_unquoted] end
 	regular: 		attached like attribute_tuple_anchor attribute Result := [False, False, Void, "regular", is_unquoted] end
 	samplepoints: 	attached like attribute_tuple_anchor attribute Result := [8, 8, Void, "samplepoints", is_unquoted] end
-	shape: 			attached like attribute_tuple_anchor attribute Result := ["ellipse", "ellipse|doublecircle|circle", Void, "shape", is_unquoted] end
+	shape: 			attached like attribute_tuple_anchor attribute Result := ["ellipse", "ellipse|doublecircle|circle|record|none|plaintext", Void, "shape", is_unquoted] end
 	shapefile: 		attached like attribute_tuple_anchor attribute Result := ["", "", Void, "shapefile", is_unquoted] end
 	sides: 			attached like attribute_tuple_anchor attribute Result := [4, 4, 0, "sides", is_unquoted] end
 	skew: 			attached like attribute_tuple_anchor attribute Result := [0, 0, -100, "skew", is_unquoted] end
@@ -98,6 +99,7 @@ feature -- Attributes
 			Result.force (height, "height")
 			Result.force (image, "image")
 			Result.force (imagescale, "imagescale")
+			Result.force (label, "label")
 			Result.force (margin, "margin")
 			Result.force (orientation, "orientation")
 			Result.force (penwidth, "penwidth")
@@ -114,7 +116,7 @@ feature -- Attributes
 			Result.force (width, "width")
 			Result.force (z, "z")
 		ensure then
-			count: Result.count = (13 + 23)
+			count: Result.count = (13 + 24)
 			matching: across Result as ic all ic.key.same_string (ic.item.attr_name) end
 		end
 
