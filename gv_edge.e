@@ -23,7 +23,9 @@ inherit
 		end
 
 create
-	make_with_nodes
+	make_with_nodes,
+	make_as_digraph_with_nodes,
+	make_as_graph_with_nodes
 
 feature {NONE} -- Initialization
 
@@ -33,6 +35,20 @@ feature {NONE} -- Initialization
 			left_node := a_left_node
 			right_node := a_right_node
 			is_digraph := a_is_digraph
+		end
+
+	make_as_digraph_with_nodes (a_left_node, a_right_node: GV_NODE)
+			-- `make_as_digraph_with_nodes' with call to
+			-- `make_with_nodes', where `a_is_digraph' is True.
+		do
+			make_with_nodes (a_left_node, a_right_node, True)
+		end
+
+	make_as_graph_with_nodes (a_left_node, a_right_node: GV_NODE)
+			-- `make_as_graph_with_nodes' with call to
+			-- `make_with_nodes', where `a_is_digraph' is False.
+		do
+			make_with_nodes (a_left_node, a_right_node, False)
 		end
 
 feature -- Outputs
@@ -83,6 +99,14 @@ feature -- Access
 			-- `toggle_directional_graphing' for `is_digraph'.
 		do
 			is_digraph := not is_digraph
+		end
+
+feature -- Settings
+
+	set_label (a_label: STRING)
+			--
+		do
+			set_attribute_value (agent label, a_label)
 		end
 
 feature -- Attributes
